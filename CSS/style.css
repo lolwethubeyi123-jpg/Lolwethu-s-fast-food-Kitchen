@@ -1,0 +1,456 @@
+/* =========================================
+   LOLWETHU'S FAST FOOD KITCHEN
+   PART 2 - CSS STYLING
+   ========================================= */
+
+/* ---------- Base Styles ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8ef;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: #d35400;
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+}
+
+header > p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #a04000;
+    transform: translateY(-2px);
+}
+
+/* ---------- Main Content ---------- */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ---------- Headings ---------- */
+
+h2 {
+    color: #d35400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #a04000;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+/* ---------- Home Welcome Section ---------- */
+
+.welcome {
+    text-align: center;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.welcome p {
+    max-width: 750px;
+    margin: 0 auto 1rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.button,
+button {
+    display: inline-block;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button {
+    margin-top: 1rem;
+}
+
+.button:hover,
+button:hover,
+.button:focus,
+button:focus {
+    background-color: #a04000;
+    transform: translateY(-2px);
+}
+
+/* ---------- Hero Image ---------- */
+
+.hero-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- What We Offer ---------- */
+
+.home-info {
+    text-align: center;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.boxes > div {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+    border: 1px solid #f0c9aa;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boxes > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Page Titles ---------- */
+
+.page-title {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- About / General Content ---------- */
+
+.content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+    margin-bottom: 1.2rem;
+}
+
+.content ul {
+    margin-left: 1.5rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- Menu ---------- */
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    border: 1px solid #f0c9aa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    margin-bottom: 0.5rem;
+}
+
+.menu-item strong {
+    color: #d35400;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h3 {
+    margin-top: 1.2rem;
+}
+
+.contact h3:first-child {
+    margin-top: 0;
+}
+
+.contact iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* ---------- Enquiry Form ---------- */
+
+.form-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #d35400;
+    border-color: #d35400;
+}
+
+form button {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main {
+        width: 92%;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 1.5rem 4%;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    header > p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        padding: 2rem 0;
+    }
+
+    .welcome,
+    .content,
+    .contact,
+    .form-box,
+    .page-title {
+        padding: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-list {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img {
+        height: auto;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
