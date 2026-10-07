@@ -1,121 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Enquiry - Lolwethu's Fast Food Kitchen</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>Make an Enquiry - Lolwethu's Fast Food Kitchen</title>
+    <!-- Local style path -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Modern Layout & Styles */
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #fcf8f2; margin: 0; padding: 0; }
+        header { background-color: #d32f2f; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+        }
+        .form-container h2 { color: #d32f2f; margin-top: 0; font-size: 2.2rem; }
+        .form-container p { color: #666; margin-bottom: 30px; }
+        
+        /* Forces inputs to stack neatly on top of each other */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #d32f2f;
+            outline: none;
+            box-shadow: 0 0 5px rgba(211, 47, 47, 0.2);
+        }
+        
+        .submit-btn {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover { background-color: #b71c1c; }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Lolwethu's Fast Food Kitchen</h1>
-    <p>Good food at a good price</p>
+    <header>
+        <img src="../Assets/Lolwethu's fast food logo.png" alt="Logo" width="120" height="90" style="object-fit: contain;" onerror="this.src='https://unsplash.com'">
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="enquiry.html">Enquiry</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-</header>
+    <main>
+        <div class="form-container">
+            <h2>Make an Enquiry</h2>
+            <p>Fill in the form below if you have any questions or custom kitchen orders.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
 
-<main>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
 
-    <section class="page-title">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
 
-        <h2>Make an Enquiry</h2>
+                <div class="form-group">
+                    <label for="meal">Select a Meal Choice</label>
+                    <select id="meal" name="meal">
+                        <option value="">-- Choose an option --</option>
+                        <option value="gatsby">Full Special Gatsby</option>
+                        <option value="kota">Special Kota</option>
+                        <option value="wings">Wings & Chips</option>
+                        <option value="russian">Russian & Chips</option>
+                        <option value="burger">Burger & Chips Combo</option>
+                    </select>
+                </div>
 
-        <p>
-            Fill in the form below if you have an enquiry.
-        </p>
+                <div class="form-group">
+                    <label for="message">Your Enquiry</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your enquiry here..." required></textarea>
+                </div>
 
-    </section>
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+            </form>
+        </div>
+    </main>
 
-
-    <section class="form-box">
-
-        <form>
-
-            <label for="name">Full Name</label>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                required
-            >
-
-
-            <label for="phone">Phone Number</label>
-
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-            >
-
-
-            <label for="email">Email Address</label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                required
-            >
-
-
-            <label for="meal">Meal</label>
-
-            <select id="meal" name="meal">
-
-                <option value="">Select a meal</option>
-
-                <option value="kota">Kota</option>
-
-                <option value="gatsby">Gatsby</option>
-
-                <option value="wings">Wings &amp; Chips</option>
-
-                <option value="russian">Russian &amp; Chips</option>
-
-                <option value="burger">Burger</option>
-
-                <option value="chips">Chips</option>
-
-            </select>
-
-
-            <label for="message">Your Enquiry</label>
-
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Write your enquiry here"
-            ></textarea>
-
-
-            <button type="submit">
-                Submit
-            </button>
-
-        </form>
-
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Lolwethu's Fast Food Kitchen</p>
-</footer>
+    <footer style="text-align: center; padding: 25px; background: #212121; color: white; margin-top: 50px;">
+        <p>&copy; 2026 Lolwethu's Fast Food Kitchen</p>
+    </footer>
 
 </body>
 </html>
